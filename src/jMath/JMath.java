@@ -32,4 +32,8 @@ public class JMath {
         }
         return output;
     }
+
+    public static int[] quadratic(int[] coef) { //needs work
+        return null;
+    }
 }
