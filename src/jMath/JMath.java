@@ -24,4 +24,12 @@ public class JMath {
     public static boolean isEven(int numb) {
         return !isOdd(numb);
     }
+
+    public static int factorial(int numb) {
+        int output = 1;
+        for (int i = 2; i <= numb; i++) {
+            output *= i;
+        }
+        return output;
+    }
 }
