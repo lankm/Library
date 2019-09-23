@@ -33,10 +33,6 @@ public class JMath {
         return output;
     }
 
-    /*
-        input: the coefficients of the equasion
-        output: the integer
-     */
     public static int[] quadratic(int[] coef) { //needs work
         return null;
     }

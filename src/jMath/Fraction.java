@@ -34,7 +34,29 @@ public class Fraction {
         multiply(new Fraction(frac.getDenominator(), frac.getNumerator()));
     }
 
+    public void add(int n) {
+        add(new Fraction(n));
+    }
+
+    public void subtract(int n) {
+        add(new Fraction(-n));
+    }
+
+    public void multiply(int n) {
+        if(n==0)
+            multiply(new Fraction(n,0));
+        multiply(new Fraction(n));
+    }
+
+    public void divide(int n) {
+        if(n==0)
+            multiply(new Fraction(0, n));
+        multiply(new Fraction(1, n));
+    }
+
     private int gcd(int n1, int n2) {
+        if(n1==0||n2==0)
+            return 1;
         int n3 = Math.max(n1, n2) % Math.min(n1, n2);
         if (n3 == 0)
             return Math.min(n1, n2);
@@ -65,7 +87,7 @@ public class Fraction {
     }
 
     public String toString() {
-        return numer.toString() + (denom == 1 ? "" : "/" + denom.toString());
+        return numer.toString() + (denom == 1 ? "" : "/" + denom);
     }
 
     public String toStringF() {
