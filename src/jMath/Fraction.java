@@ -34,24 +34,36 @@ public class Fraction {
         multiply(new Fraction(frac.getDenominator(), frac.getNumerator()));
     }
 
-    public void add(int n) {
-        add(new Fraction(n));
+    public void add(int... n) {
+        for(int numb:n)
+            add(new Fraction(numb));
     }
 
-    public void subtract(int n) {
-        add(new Fraction(-n));
+    public void subtract(int... n) {
+        for(int numb:n)
+            add(new Fraction(-numb));
     }
 
-    public void multiply(int n) {
-        if(n==0)
-            multiply(new Fraction(n,0));
-        multiply(new Fraction(n));
+    public void multiply(int... n) {
+        for(int numb:n) {
+            if (numb == 0) {
+                numer = 0;
+                denom = 0;
+                break;
+            }
+            multiply(new Fraction(numb));
+        }
     }
 
-    public void divide(int n) {
-        if(n==0)
-            multiply(new Fraction(0, n));
-        multiply(new Fraction(1, n));
+    public void divide(int... n) {
+        for(int numb:n) {
+            if (numb == 0) {
+                numer = 0;
+                denom = 0;
+                break;
+            }
+            multiply(new Fraction(1,numb));
+        }
     }
 
     private int gcd(int n1, int n2) {

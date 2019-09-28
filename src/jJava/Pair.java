@@ -1,8 +1,8 @@
 package jJava;
 
 public class Pair<E extends Comparable> {
-    private E bottom;
     private E top;
+    private E bottom;
 
     public Pair(E varOne, E varTwo) {
         if(varOne.compareTo(varTwo)<0) {
