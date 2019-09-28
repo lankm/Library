@@ -4,9 +4,6 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class InputVerification {
-    //public static final String DOUBLE_REGEX = "";
-    //public static final String INTEGER_REGEX = "?-";
-
     public static String verify(String regex) {
         return verify("Please type in a response: ", regex);
     }
